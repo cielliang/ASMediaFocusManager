@@ -39,6 +39,8 @@
 @property (nonatomic, assign) BOOL zoomEnabled;
 // Returns whether gesture is disabled during zooming. Defaults to YES.
 @property (nonatomic, assign) BOOL gestureDisabledDuringZooming;
+// Determine whether defocusing with tap or not
+@property (nonatomic) BOOL isDefocusingWithTap;
 
 - (void)installOnViews:(NSArray *)views;
 - (void)installOnView:(UIView *)view;

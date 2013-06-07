@@ -19,7 +19,6 @@ static CGFloat const kAnimationDuration = 0.5;
 @property (nonatomic, strong) UIView *mediaView;
 @property (nonatomic, strong) ASMediaFocusController *focusViewController;
 @property (nonatomic) BOOL isZooming;
-@property (nonatomic) BOOL isDefocusingWithTap;
 @end
 
 @implementation ASMediaFocusManager
@@ -175,7 +174,7 @@ static CGFloat const kAnimationDuration = 0.5;
     doneButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [doneButton setTitle:NSLocalizedString(@"Done", @"Done") forState:UIControlStateNormal];
     [doneButton addTarget:self action:@selector(handleDefocusGesture:) forControlEvents:UIControlEventTouchUpInside];
-    doneButton.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
+    doneButton.backgroundColor = [UIColor colorWithWhite:0 alpha:0.0];
     [doneButton sizeToFit];
     doneButton.frame = CGRectInset(doneButton.frame, -20, -4);
     doneButton.layer.borderWidth = 2;
